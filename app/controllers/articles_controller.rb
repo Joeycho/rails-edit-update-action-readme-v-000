@@ -26,6 +26,7 @@ class ArticlesController < ApplicationController
   end
  
   def update
+    binding.pry
     @article = Article.find(params[:article][:id])
     @article.update(title: params[:article][:title], description: params[:article][:description])
     binding.pry
